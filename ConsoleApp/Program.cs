@@ -52,7 +52,12 @@ namespace ConsoleApp
             {
                 for(int j = 0; j < map[i].Length; j++)
                 {
-                    var vertices[] = graph.AddVertex($"{i}-{j}");
+                    var vertices = graph.AddVertex(i-j);
+
+                    if(i>0 && map[i - 1][j])
+                    {
+                        
+                    }
                 }
             }
             Console.WriteLine( graph.ToString<int>() );
